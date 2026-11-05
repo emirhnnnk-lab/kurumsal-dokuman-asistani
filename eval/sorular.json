@@ -1,0 +1,18 @@
+[
+ {"soru": "7 yıllık kıdemi olan çalışanın yıllık izni kaç iş günü?", "kaynak": "izin-politikasi.md", "beklenen": ["20"]},
+ {"soru": "Kullanılmayan izin bir sonraki yıla en fazla kaç gün devreder?", "kaynak": "izin-politikasi.md", "beklenen": ["10"]},
+ {"soru": "İzin talebi kaç gün önceden yapılmalı?", "kaynak": "izin-politikasi.md", "beklenen": ["10"]},
+ {"soru": "Eşi doğum yapan çalışana kaç gün izin verilir?", "kaynak": "izin-politikasi.md", "beklenen": ["5"]},
+ {"soru": "Masraflar kaç gün içinde sisteme girilmeli?", "kaynak": "masraf-yonetmeligi.md", "beklenen": ["15"]},
+ {"soru": "Şehir dışı seyahatte günlük yemek harcırahı ne kadar?", "kaynak": "masraf-yonetmeligi.md", "beklenen": ["1.200"]},
+ {"soru": "Özel araçla kilometre başına ne kadar ödeniyor?", "kaynak": "masraf-yonetmeligi.md", "beklenen": ["8"]},
+ {"soru": "Gecelik konaklama limiti nedir?", "kaynak": "masraf-yonetmeligi.md", "beklenen": ["3.500"]},
+ {"soru": "Yangın sırasında asansör kullanılabilir mi?", "kaynak": "isg-acil-durum-proseduru.md", "beklenen": ["kullanılmaz", "hayır"]},
+ {"soru": "Ramak kala olaylar ne kadar sürede bildirilmeli?", "kaynak": "isg-acil-durum-proseduru.md", "beklenen": ["24"]},
+ {"soru": "İlk yardım sertifikaları kaç yılda bir yenilenir?", "kaynak": "isg-acil-durum-proseduru.md", "beklenen": ["3"]},
+ {"soru": "Haftada kaç gün ofiste çalışılıyor?", "kaynak": "uzaktan-calisma-politikasi.md", "beklenen": ["3"]},
+ {"soru": "Uzaktan çalışma için aylık internet desteği ne kadar?", "kaynak": "uzaktan-calisma-politikasi.md", "beklenen": ["500"]},
+ {"soru": "Kaybolan cihaz ne kadar sürede bildirilmeli?", "kaynak": "uzaktan-calisma-politikasi.md", "beklenen": ["1 saat", "bir saat"]},
+ {"soru": "Şirketin hisse senedi fiyatı nedir?", "kaynak": null, "beklenen": ["yer almıyor"]},
+ {"soru": "Yöneticilere şirket aracı veriliyor mu?", "kaynak": null, "beklenen": ["yer almıyor"]}
+]
