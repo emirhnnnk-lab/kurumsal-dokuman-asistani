@@ -1,5 +1,7 @@
 # Kurumsal Doküman Asistanı (Lokal RAG)
 
+**🔴 Canlı demo:** [huggingface.co/spaces/emrhnnnnnn/ai-uygulamalar-demo](https://huggingface.co/spaces/emrhnnnnnn/ai-uygulamalar-demo) — sekme: 📚 Doküman Asistanı (demo OpenAI gpt-5.4-mini ile çalışır; iş mantığı bu repodakiyle aynı)
+
 Şirket dokümanlarını **tamamen lokalde** sorgulayan asistan: veri buluta gitmez, her cevap kaynak gösterir, dokümanda olmayan soruya uydurmaz.
 
 ## Mimari
