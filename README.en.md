@@ -25,7 +25,7 @@ Question → mixed search (meaning + Turkish word-root match) → similarity thr
 | Correct information in the answer | **15/16** |
 | No made-up answer on trap questions | **2/2** |
 
-That one question is exactly why I added mixed search: with meaning search alone, a Turkish suffix kept the right piece from coming up.
+That one question is the difference mixed search makes: with meaning search alone, the right piece didn't come up for it.
 
 The one wrong answer is a reasoning error: the 3B model found the right paragraph but picked the wrong range for "7 years of seniority". A bigger model, or turning the seniority table into structured data, would fix this kind of error. Details: [eval/RAPOR.md](eval/RAPOR.md)
 

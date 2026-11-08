@@ -25,7 +25,7 @@ Soru → karma arama (anlam + Türkçe kök eşleşmesi) → benzerlik eşiği �
 | Cevapta doğru bilgi | **15/16** |
 | Tuzak sorularda uydurmama | **2/2** |
 
-Karma aramayı eklememin sebebi tam olarak o 1 soruydu: sadece anlam aramasıyla Türkçe ek yüzünden doğru parça gelmiyordu.
+Aradaki 1 soru karma aramanın farkı: sadece anlam aramasıyla o soruda doğru parça gelmiyordu.
 
 Tek yanlış cevap bir akıl yürütme hatası: 3B model doğru paragrafı bulduğu halde "7 yıllık kıdem" için yanlış aralığı seçti. Daha büyük bir model ya da kıdem tablosunu yapılandırılmış veriye çevirmek bu tür hatayı çözer. Ayrıntı: [eval/RAPOR.md](eval/RAPOR.md)
 
