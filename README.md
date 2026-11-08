@@ -1,5 +1,7 @@
 # Kurumsal Doküman Asistanı (Lokal RAG)
 
+> **EN summary:** Fully local RAG assistant for company documents: heading-aware chunking, hybrid search (vectors + Turkish stem overlap), a similarity threshold that refuses to answer when the documents don't cover the question, and cited sources in every answer. On a 16-question eval: 16/16 correct retrieval, 15/16 correct answers, 2/2 trap questions refused. Includes Docker setup.
+
 **🔴 Canlı demo:** [huggingface.co/spaces/emrhnnnnnn/ai-uygulamalar-demo](https://huggingface.co/spaces/emrhnnnnnn/ai-uygulamalar-demo) — sekme: 📚 Doküman Asistanı (demo OpenAI gpt-5.4-mini ile çalışır; iş mantığı bu repodakiyle aynı)
 
 Şirket dokümanlarını **tamamen lokalde** sorgulayan asistan: veri buluta gitmez, her cevap kaynak gösterir, dokümanda olmayan soruya uydurmaz.
