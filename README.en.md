@@ -9,6 +9,8 @@ In every company, the answer to questions like "how many days of leave do I have
 - **Every answer shows its source:** the answer to "where did you get this?" is always there.
 - **No making things up:** if the documents don't cover a question, it says so.
 
+![Document Assistant demo: answer to a leave-days question with cited sources](docs/ekran-1.png) ![Out-of-scope stock price question refused with "not in the documents"](docs/ekran-2.png)
+
 ## How it works
 ```
 docs/ (MD, TXT, PDF) → split into pieces by headings → meaning vectors (nomic-embed-text) → ChromaDB

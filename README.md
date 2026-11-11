@@ -9,6 +9,8 @@ Her şirkette "izin hakkım kaç gün?", "masraf formunu kime göndereyim?" gibi
 - **Her cevap kaynağını göstersin:** "bunu nereden çıkardın?" sorusunun cevabı hep hazır.
 - **Bilmediğini uydurmasın:** belgelerde olmayan bir soruya "yer almıyor" desin.
 
+![Doküman Asistanı demosu: izin süresi sorusuna kaynaklı cevap](docs/ekran-1.png) ![Belgelerde olmayan hisse senedi sorusuna "yer almıyor" cevabı](docs/ekran-2.png)
+
 ## Nasıl çalışıyor
 ```
 docs/ (MD, TXT, PDF) → başlıklara göre parçalara bölme → anlam vektörü (nomic-embed-text) → ChromaDB
