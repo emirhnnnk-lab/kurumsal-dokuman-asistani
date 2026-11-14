@@ -40,7 +40,15 @@ curl -X POST localhost:8000/ingest       # indexes the docs/ folder
 python eval/degerlendir.py
 pytest                                   # unit tests without a model (fake vectors)
 ```
-Docker files are included (`docker compose up`: Ollama + assistant). Honest note: I haven't tested the Docker setup end to end yet; the local setup above is tested.
+
+## Running with Docker
+```bash
+docker compose up -d --build            # Ollama + model download + assistant
+curl -X POST localhost:8000/ingest      # indexes the docs/ folder
+```
+- UI: http://localhost:8000 (API: `/ask`, `/ingest`, `/health`). Ollama: 11434.
+- On first start the `model-cek` step pulls `qwen2.5:3b` (~1.9 GB) and `nomic-embed-text`; this takes a few minutes depending on your connection. Follow it with `docker compose logs -f model-cek`. Models persist in the `ollama` volume, so later starts are fast.
+- To use another model, put `CHAT_MODEL=...` in a `.env` file. Stop with `docker compose down` (volumes are kept).
 
 ## Tech
 Python · FastAPI · ChromaDB · Ollama · nomic-embed-text · qwen2.5:3b · pypdf · pytest · Docker

@@ -1,13 +1,40 @@
+# Tek komut: docker compose up   (ilk açılışta modeller indirilir)
+# Model adları app/config.py ile aynı varsayılanlara sahiptir; .env ile değiştirilebilir.
 services:
   ollama:
     image: ollama/ollama
-    volumes: [ollama:/root/.ollama]
+    volumes:
+      - ollama:/root/.ollama          # indirilen modeller burada kalır
     ports: ["11434:11434"]
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  # Tek seferlik adım: gerekli modelleri indirir, sonra kapanır
+  model-cek:
+    image: ollama/ollama
+    depends_on:
+      ollama: { condition: service_healthy }
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    entrypoint: ["/bin/sh", "-c", "ollama pull ${CHAT_MODEL:-qwen2.5:3b} && ollama pull ${EMBED_MODEL:-nomic-embed-text}"]
+    restart: "no"
+
   asistan:
     build: .
-    depends_on: [ollama]
+    depends_on:
+      ollama: { condition: service_healthy }
+      model-cek: { condition: service_completed_successfully }
     ports: ["8000:8000"]
     environment:
       OLLAMA_URL: http://ollama:11434
+      CHAT_MODEL: ${CHAT_MODEL:-qwen2.5:3b}
+      EMBED_MODEL: ${EMBED_MODEL:-nomic-embed-text}
+    volumes:
+      - chroma:/data                  # indeks yeniden başlatmada korunur
+
 volumes:
   ollama:
+  chroma:

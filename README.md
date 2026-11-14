@@ -40,7 +40,15 @@ curl -X POST localhost:8000/ingest       # docs/ klasörünü indeksler
 python eval/degerlendir.py
 pytest                                   # modelsiz birim testleri (sahte vektörlerle)
 ```
-Docker dosyaları da hazır (`docker compose up`: Ollama + asistan). Dürüst not: Docker kurulumunu henüz baştan sona test etmedim; yukarıdaki yerel kurulum test edildi.
+
+## Docker ile çalıştırma
+```bash
+docker compose up -d --build            # Ollama + model indirme + asistan
+curl -X POST localhost:8000/ingest      # docs/ klasörünü indeksler
+```
+- Arayüz: http://localhost:8000 (API: `/ask`, `/ingest`, `/health`). Ollama: 11434.
+- İlk açılışta `model-cek` adımı `qwen2.5:3b` (~1,9 GB) ve `nomic-embed-text` modellerini indirir; bağlantıya göre birkaç dakika sürer. İlerleme: `docker compose logs -f model-cek`. Modeller `ollama` volume'unda kalır, sonraki açılışlar hızlıdır.
+- Farklı model için `.env` dosyasına `CHAT_MODEL=...` yaz. Durdurmak için `docker compose down` (volume'lar silinmez).
 
 ## Teknoloji
 Python · FastAPI · ChromaDB · Ollama · nomic-embed-text · qwen2.5:3b · pypdf · pytest · Docker
